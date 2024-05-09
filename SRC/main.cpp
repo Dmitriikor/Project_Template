@@ -1,11 +1,11 @@
-﻿#include <iostream>
+﻿//Fixed issues found by PVS-Studio
+#include <iostream>
 #include <chrono>
 #include <windows.h>
 #include <fstream>
 #include <string>
 #include <format>
 #include "json.hpp"
-//
 using json = nlohmann::json;
 
 void progressBar(float current_progress, float totalCounter) 
