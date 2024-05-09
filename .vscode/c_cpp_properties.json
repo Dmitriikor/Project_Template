@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "GCC",
+            "compilerPath": "c:/ProgramData/mingw64/mingw64/bin/g++.exe",
+            "compilerArgs": [
+                "-m64"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++23",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "browse": {
+                "path": [
+                    "include",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "mergeConfigurations": true
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}
