@@ -1,0 +1,8 @@
+[
+{
+  "directory": "Z:/c++/Project_Template/build",
+  "command": "g++  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=c++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -fsanitize-address-use-after-scope -fexceptions -fms-extensions -fvisibility=hidden -fPIC -O0 -g -o CMakeFiles\\main.dir\\SRC\\main.cpp.obj -c Z:\\c++\\Project_Template\\SRC\\main.cpp",
+  "file": "Z:/c++/Project_Template/SRC/main.cpp",
+  "output": "CMakeFiles/main.dir/SRC/main.cpp.obj"
+}
+]

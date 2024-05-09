@@ -10,14 +10,15 @@ using json = nlohmann::json;
 
 void progressBar(float current_progress, float totalCounter) 
 {
-    float percentage = current_progress / totalCounter * 100;
-    auto pos = (percentage / 100 * totalCounter);
+    float percentage = current_progress / totalCounter * (float)100;
+    auto pos = (percentage / (float)100 * totalCounter);
     const std::string bar((size_t)pos, '=');
     const std::string blank((size_t)totalCounter - (size_t)pos, ' ');
 
     std::cout << '[' << bar << '>' << blank << "] " << int(percentage) << " %\r";
     std::cout.flush();
 }
+
 
 int main() 
 {
@@ -121,8 +122,8 @@ int main()
 
             };
 
-        auto ticket_N_temp = ticket_N + std::to_string(countr);
-        //auto ticket_N_temp = std::format("{}{}", ticket_N, countr);
+        //auto ticket_N_temp = ticket_N + std::to_string(countr);
+        auto ticket_N_temp = std::format("{}{}", ticket_N, countr);
         data[ticket_N_temp] = ticket;
 
     }
@@ -138,14 +139,14 @@ int main()
         input_file.close();
 
         std::ofstream file("data.json");
-        file << dataOpen.dump(4);
+        file << dataOpen.dump(4); //-V112 //-V112
         file.close();
         return 0;
     }
     else
     {
         std::ofstream file("data.json");
-        file << data.dump(4);
+        file << data.dump(4); //-V112 //-V112
         file.close();
     }
 
