@@ -5,7 +5,7 @@
 #include <string>
 #include <format>
 #include "json.hpp"
-/// @brief /
+//
 using json = nlohmann::json;
 
 void progressBar(float current_progress, float totalCounter) 
