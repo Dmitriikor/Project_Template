@@ -6,6 +6,8 @@
 #include <string>
 #include <format>
 #include "json.hpp"
+#include "boost/algorithm/string.hpp"
+
 using json = nlohmann::json;
 
 void progressBar(float current_progress, float totalCounter) 

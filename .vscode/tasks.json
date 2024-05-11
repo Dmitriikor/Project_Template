@@ -49,6 +49,10 @@
                 //"-fsanitize=address",
                 //"-fsanitize=undefined",
                 "-isystem", "${workspaceFolder}\\include",
+                "-isystem", "C:\\boost_build",
+                "-isystem", "C:\\boost_build\\include\\boost-1_85",
+                "-isystem", "C:\\boost_build\\lib",
+
                 "-fsanitize-address-use-after-scope",
                 "-fexceptions",
                 "-fms-extensions",
