@@ -41,7 +41,7 @@ int main()
     if (input_file.is_open()) 
     {
            input_file >> dataOpen; 
-           auto& last_ticket = dataOpen.back();
+           auto& last_ticket = dataOpen.back(); 
            countr = last_ticket["Counter"];
     }
 
