@@ -9,9 +9,8 @@
             "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "${workspaceFolder}/include",
-                "C:\\boost_build",
-                "C:\\boost_build\\include\\boost-1_85",
-                "C:\\boost_build\\lib"
+                "C:/boost_build/include",
+                "C:/boost_build/lib"
             ],
             "defines": [
                 "_DEBUG",

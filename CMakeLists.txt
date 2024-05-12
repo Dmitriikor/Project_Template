@@ -7,17 +7,24 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
 # Указываем пути к заголовочным файлам
 include_directories(
-    ${CMAKE_SOURCE_DIR}/include  # Путь к папке с заголовочными файлами
+    ${CMAKE_SOURCE_DIR}/include  
+    C:/boost_build/lib
+    C:/boost_build/include
+    C:/boost_build/include/boost-1_85
+)
+
+# Указываем пути к библиотекам
+link_directories(
+    C:/boost_build/lib
 )
 
 # Указываем пути к файлам исходного кода
 file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/SRC/*.cpp)
 
 # Добавляем исполняемый файл или библиотеку
-add_executable(main ${SOURCES})  # Замените MyExecutable на желаемое название исполняемого файла
+add_executable(main ${SOURCES})  
 
 # Указываем аргументы компилятора для g++ / gcc на Windows
-
 target_compile_options(main PRIVATE
  -std=c++23
  -fdiagnostics-color=always
@@ -33,3 +40,12 @@ target_compile_options(main PRIVATE
  -g
  
 )
+
+
+# Поиск библиотек в указанной папке
+file(GLOB BOOST_LIBRARIES "C:/boost_build/lib/libboost_*.dll" "C:/boost_build/lib/libboost_*.a")
+
+# Цикл для добавления найденных библиотек
+foreach(BOOST_LIB ${BOOST_LIBRARIES})
+    target_link_libraries(main PRIVATE ${BOOST_LIB})
+endforeach()
