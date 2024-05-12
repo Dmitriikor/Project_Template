@@ -12,7 +12,7 @@
         "cwd": "${workspaceFolder}",
         "environment": [],
         "console": "externalTerminal",
-        "preLaunchTask": "build and debug active file"
+        "preLaunchTask": "cmake configure"//"build and debug active file"
       }
     ]
   }
